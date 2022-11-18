@@ -26,6 +26,8 @@ object GemminiConfigs {
 
     spatialArrayOutputType = SInt(20.W),
 
+    hardcode_d_to_garbage_addr = true
+
     // Spatial array size options
     tileRows = 1,
     tileColumns = 1,
@@ -33,7 +35,7 @@ object GemminiConfigs {
     meshColumns = 16,
 
     // Spatial array PE options
-    dataflow = Dataflow.BOTH,
+    dataflow = Dataflow.WS,
 
     // Scratchpad and accumulator
     sp_capacity = CapacityInKilobytes(256),
@@ -46,9 +48,9 @@ object GemminiConfigs {
     acc_singleported = false,
 
     // DNN options
-    has_training_convs = true,
-    has_max_pool = true,
-    has_nonlinear_activations = true,
+    has_training_convs = false,
+    has_max_pool = false,
+    has_nonlinear_activations = false,
 
     // Reservation station entries
     reservation_station_full_entries = 16,
@@ -158,8 +160,8 @@ object GemminiConfigs {
     acc_read_small_width = true,
 
     ex_read_from_spad = true,
-    ex_read_from_acc = true,
-    ex_write_to_spad = true,
+    ex_read_from_acc = false,
+    ex_write_to_spad = false,
     ex_write_to_acc = true,
   )
 
