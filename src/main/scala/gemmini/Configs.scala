@@ -26,7 +26,7 @@ object GemminiConfigs {
 
     spatialArrayOutputType = SInt(20.W),
 
-    hardcode_d_to_garbage_addr = true
+    hardcode_d_to_garbage_addr = true,
 
     // Spatial array size options
     tileRows = 1,
