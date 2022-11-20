@@ -21,7 +21,7 @@ import hardfloat._
 object GemminiConfigs {
   val defaultConfig = GemminiArrayConfig[SInt, Float, Float](
     // Datatypes
-    inputType = SInt(8.W),
+    inputType = SInt(32.W),
     accType = SInt(32.W),
 
     spatialArrayOutputType = SInt(20.W),
